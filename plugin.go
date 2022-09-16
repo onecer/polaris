@@ -32,6 +32,7 @@ import (
 	_ "github.com/polarismesh/polaris-server/plugin/cmdb/memory"
 	_ "github.com/polarismesh/polaris-server/plugin/discoverevent/local"
 	_ "github.com/polarismesh/polaris-server/plugin/discoverstat/discoverlocal"
+	_ "github.com/polarismesh/polaris-server/plugin/example"
 	_ "github.com/polarismesh/polaris-server/plugin/healthchecker/heartbeatmemory"
 	_ "github.com/polarismesh/polaris-server/plugin/healthchecker/heartbeatredis"
 	_ "github.com/polarismesh/polaris-server/plugin/history/logger"

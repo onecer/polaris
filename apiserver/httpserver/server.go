@@ -73,6 +73,7 @@ type HTTPServer struct {
 	rateLimit         plugin.Ratelimit
 	statis            plugin.Statis
 	auth              plugin.Auth
+	example           plugin.Example
 
 	v1Server v1.HTTPServerV1
 	v2Server v2.HTTPServerV2
@@ -140,6 +141,9 @@ func (h *HTTPServer) Initialize(_ context.Context, option map[string]interface{}
 
 // Run 启动HTTP API服务器
 func (h *HTTPServer) Run(errCh chan error) {
+	h.example = plugin.GetExample()
+	whoIs := h.example.WhoAreYou("xiaodiaomao")
+	fmt.Printf("nishixiaodiaomao: %s \n", whoIs)
 	log.Infof("start httpserver")
 	h.exitCh = make(chan struct{}, 1)
 	h.start = true

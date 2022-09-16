@@ -307,6 +307,8 @@ store:
   #     txIsolationLevel: 2 #LevelReadCommitted
 # 插件配置
 plugin:
+  example:
+    name: example
   history:
     name: HistoryLogger
   discoverEvent:
